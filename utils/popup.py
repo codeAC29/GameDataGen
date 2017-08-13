@@ -8,6 +8,7 @@ class App:
         self.text_field = Entry(self.master)
         self.text_field.pack()
         self.text_field.focus_set()
+        self.text_value = None
 
         # button grabbing the text value
         accept = Button(self.master, text="Ok", fg="red", width=10, command=self.grab_value)

@@ -101,10 +101,14 @@ def main():
             print_val(value, pad, n_item, len(items))
         print("")
 
-        cv2.startWindowThread()
-        cv2.namedWindow("Video")
+        if args.debug:
+            pass
+        else:
+            cv2.startWindowThread()
+            cv2.namedWindow("Video")
         cv2.imshow('Video', current_frame)
-        # cv2.waitKey(0.5)
+        if args.debug:
+            cv2.waitKey(1)
 
 
 if __name__ == '__main__':
