@@ -1,6 +1,5 @@
-# Mouse click and creating box taken from:
+# Mostly adapted from:
 # http://www.pyimagesearch.com/2015/03/09/capturing-mouse-click-events-with-python-and-opencv/
-
 
 # import the necessary packages
 import argparse
@@ -8,6 +7,16 @@ import cv2
 from tkinter import *
 from popup import App
 
+# Clear screen
+print('\033[0;0f\033[0J')
+# Color Palette
+CP_R = '\033[31m'
+CP_G = '\033[32m'
+CP_B = '\033[34m'
+CP_Y = '\033[33m'
+CP_C = '\033[0m'
+
+print('{}Press {}c {} to exit!!!{}'.format(CP_R, CP_G, CP_R, CP_C)
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 _ = parser.add_argument
